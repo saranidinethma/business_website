@@ -27,37 +27,24 @@ export default function Header() {
 
   return (
     <>
-      {/* Top Bar */}
-      <div className="bg-slate-800 text-white py-2 px-4 text-sm">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <Phone className="h-4 w-4" />
-              <span>+1 (555) 123-4567</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Mail className="h-4 w-4" />
-              <span>info@yourbusiness.com</span>
-            </div>
-          </div>
-          <div className="hidden md:block">
-            <span>Professional Services Since 2020</span>
-          </div>
-        </div>
-      </div>
 
-      {/* Main Header */}
-      <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-lg" : "bg-white"}`}
-      >
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Logo */}
-            <div className="flex-shrink-0">
-              <Link href="/" className="text-2xl font-bold text-slate-800">
-                YourBusiness
-              </Link>
-            </div>
+
+   {/* Main Header */}
+<header
+  className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-lg" : "bg-white"}`}
+>
+  <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-between items-center h-16">
+      {/* Logo */}
+      <div className="flex-shrink-0">
+        <Link href="/">
+          <img
+            src="/images/Logo Enhanced_enhanced.jpeg"
+            alt="Your Logo"
+            className="h-14 w-auto"
+          />
+        </Link>
+      </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:block">
