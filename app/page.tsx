@@ -1,8 +1,8 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import BackToTop from "./components/BackToTop";
-import ServiceCard from "./components/ServiceCard";
-import TestimonialCarousel from "./components/TestimonialCarousel";
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import BackToTop from "./components/BackToTop"
+import ServiceCard from "./components/ServiceCard"
+import TestimonialCarousel from "./components/TestimonialCarousel"
 import Link from "next/link"
 import { Code, TrendingUp, Users, Lightbulb, Shield, Zap, ArrowRight } from "lucide-react"
 
@@ -73,19 +73,36 @@ export default function Home() {
     <div className="min-h-screen">
       <Header />
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-800 via-slate-900 to-blue-900 text-white overflow-hidden">
+      {/* Hero Section with Video Background */}
+      <section className="relative text-white overflow-hidden">
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="video-background"
+          poster="/placeholder.svg?height=500&width=600"
+        >
+          <source src="/videos/hero-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Semi-transparent Overlay */}
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+
+        {/* Hero Content */}
+        <div className="relative max-w-7xl mx-auto section-padding z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in-up">
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                Transform Your Business with
-                <span className="text-blue-400"> Professional Services</span>
+                Elevate Your Projects with
+                <span className="text-blue-400"> Solid Serve Technical Services</span>
               </h1>
               <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-                We deliver innovative solutions that drive growth, enhance efficiency, and help your business reach new
-                heights of success.
+                Welcome to our service, delivering dependable technical solutions across the UAE. With expertise and
+                efficiency, our team ensures top-quality residential, commercial, and industrial projects, on time and
+                within budget, with a focus on safety and customer satisfaction.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/services" className="btn-primary text-center">
@@ -96,19 +113,20 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="animate-slide-in-right">
+            {/* Removed the hero image here */}
+            {/* <div className="animate-slide-in-right">
               <img
                 src="/placeholder.svg?height=500&width=600"
                 alt="Professional Services"
                 className="w-full h-auto rounded-lg shadow-2xl"
               />
-            </div>
+            </div> */}
           </div>
         </div>
 
         {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-500 rounded-full opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-blue-400 rounded-full opacity-10 animate-pulse delay-1000"></div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-500 rounded-full opacity-20 animate-pulse z-10"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-blue-400 rounded-full opacity-10 animate-pulse delay-1000 z-10"></div>
       </section>
 
       {/* Services Overview */}
