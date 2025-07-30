@@ -5,11 +5,13 @@ interface ServiceCardProps {
   title: string
   description: string
   features: string[]
+  image: string
 }
 
-export default function ServiceCard({ icon: Icon, title, description, features }: ServiceCardProps) {
+export default function ServiceCard({ icon: Icon, title, description, features, image }: ServiceCardProps) {
   return (
     <div className="bg-white rounded-lg shadow-lg p-6 card-hover border border-slate-100">
+      <img src={image} alt={`${title} Image`} className="w-full h-48 object-cover rounded-t-lg mb-4" />
       <div className="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-lg mb-4">
         <Icon className="h-8 w-8 text-blue-600" />
       </div>

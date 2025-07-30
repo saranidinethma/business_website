@@ -9,40 +9,61 @@ import { Code, TrendingUp, Users, Lightbulb, Shield, Zap, ArrowRight } from "luc
 const services = [
   {
     icon: Code,
-    title: "Web Development",
-    description: "Custom websites and web applications built with modern technologies.",
-    features: ["Responsive Design", "Fast Performance", "SEO Optimized", "Mobile First"],
+    title: "Property Renovations",
+    description: "Comprehensive solutions for all types of property upgrades and remodeling.",
+    features: ["All kinds of property renovations", "Comprehensive renovation solutions"],
+    image: "/images/Property Renovations.jpg",
   },
   {
     icon: TrendingUp,
-    title: "Digital Marketing",
-    description: "Comprehensive digital marketing strategies to grow your online presence.",
-    features: ["Social Media Marketing", "Content Strategy", "PPC Campaigns", "Analytics"],
+    title: "Air-Conditioning & Air Filtration Systems",
+    description: "Expert installation and maintenance of efficient HVAC systems.",
+    features: ["Installation & maintenance services", "Efficient HVAC system solutions"],
+    image: "/images/Air-Conditioning.jpg",
   },
   {
     icon: Users,
-    title: "Business Consulting",
-    description: "Expert guidance to help your business reach its full potential.",
-    features: ["Strategy Planning", "Process Optimization", "Growth Analysis", "Market Research"],
+    title: "Electromechanical Equipment Installation",
+    description: "Professional setup and integration of electromechanical systems.",
+    features: ["Professional installation of electromechanical systems", "Reliable equipment setup"],
+    image: "/images/Electromechanical.jpg",
   },
   {
     icon: Lightbulb,
-    title: "Brand Strategy",
-    description: "Build a strong brand identity that resonates with your target audience.",
-    features: ["Brand Identity", "Logo Design", "Brand Guidelines", "Market Positioning"],
+    title: "Plumbing & Sanitary Contracting",
+    description: "High-quality plumbing and sanitary fixture installations.",
+    features: ["Expert plumbing and sanitary solutions", "High-quality fixture installations"],
+    image: "/images/plumber is plumbing.jpg",
   },
   {
     icon: Shield,
-    title: "Security Solutions",
-    description: "Protect your business with comprehensive security measures.",
-    features: ["Data Protection", "Cybersecurity", "Risk Assessment", "Compliance"],
+    title: "Floor and Wall Tiling Works",
+    description: "Custom, durable tiling services for floors and walls.",
+    features: ["Custom tiling for floors and walls", "Durable and aesthetic designs"],
+    image: "/images/WhatsApp Image 2025-06-28 at 12.06.34 (2).jpg",
   },
   {
     icon: Zap,
-    title: "Performance Optimization",
-    description: "Optimize your systems and processes for maximum efficiency.",
-    features: ["Speed Optimization", "System Analysis", "Performance Monitoring", "Scalability"],
+    title: "Carpentry & Flooring Services",
+    description: "Custom carpentry and premium flooring installations.",
+    features: ["Custom carpentry work", "Premium flooring installations"],
+    image: "/images/Carpentry & Flooring Services.jpg",
   },
+  {
+    icon: Code,
+    title: "Swimming Pool Tiling, Fixing & Maintenance",
+    description: "Expert tiling, repair, and regular maintenance for pools.",
+    features: ["Pool tiling and repair services", "Regular maintenance and upkeep"],
+    image: "/images/Swimming Pool Tiling, Fixing & Maintenance.jpg",
+  },
+   {
+    icon: Code,
+    title: "Painting Contracting",
+    description: "Professional interior and exterior painting with quality finishes.",
+    features: ["Interior and exterior painting services", "High-quality finishes"],
+    image: "/images/WhatsApp Image 2025-06-28 at 12.06.32.jpg",
+  },
+
 ]
 
 const whyChooseUs = [
@@ -74,7 +95,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section with Video Background */}
-      <section className="relative text-white overflow-hidden">
+      <section className="relative text-white overflow-hidden min-h-screen">
         {/* Video Background */}
         <video
           autoPlay
@@ -92,7 +113,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black opacity-50"></div>
 
         {/* Hero Content */}
-        <div className="relative max-w-7xl mx-auto section-padding z-10">
+        <div className="relative max-w-7xl mx-auto py-32 lg:py-48 z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in-up">
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -113,20 +134,12 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            {/* Removed the hero image here */}
-            {/* <div className="animate-slide-in-right">
-              <img
-                src="/placeholder.svg?height=500&width=600"
-                alt="Professional Services"
-                className="w-full h-auto rounded-lg shadow-2xl"
-              />
-            </div> */}
           </div>
         </div>
 
         {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-500 rounded-full opacity-20 animate-pulse z-10"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-blue-400 rounded-full opacity-10 animate-pulse delay-1000 z-10"></div>
+        <div className="absolute top-24 left-12 w-24 h-24 bg-blue-500 rounded-full opacity-20 animate-pulse z-10"></div>
+        <div className="absolute bottom-24 right-12 w-40 h-40 bg-blue-400 rounded-full opacity-10 animate-pulse delay-1000 z-10"></div>
       </section>
 
       {/* Services Overview */}

@@ -3,90 +3,65 @@ import Footer from "../components/Footer"
 import BackToTop from "../components/BackToTop"
 import ServiceCard from "../components/ServiceCard"
 import Link from "next/link"
-import { Code, TrendingUp, Users, Lightbulb, Shield, Zap, CheckCircle } from "lucide-react"
+import { Code, TrendingUp, Users, Lightbulb, Shield, Zap, CheckCircle, ArrowRight } from "lucide-react"
 
 const services = [
-  {
+   {
     icon: Code,
-    title: "Web Development",
-    description:
-      "Custom websites and web applications built with modern technologies for optimal performance and user experience.",
-    features: [
-      "Responsive Design",
-      "Fast Performance",
-      "SEO Optimized",
-      "Mobile First",
-      "Custom CMS",
-      "E-commerce Solutions",
-    ],
+    title: "Property Renovations",
+    description: "Comprehensive solutions for all types of property upgrades and remodeling.",
+    features: ["All kinds of property renovations", "Comprehensive renovation solutions"],
+    image: "/images/Property Renovations.jpg",
   },
   {
     icon: TrendingUp,
-    title: "Digital Marketing",
-    description:
-      "Comprehensive digital marketing strategies to grow your online presence and reach your target audience effectively.",
-    features: [
-      "Social Media Marketing",
-      "Content Strategy",
-      "PPC Campaigns",
-      "Analytics",
-      "Email Marketing",
-      "Conversion Optimization",
-    ],
+    title: "Air-Conditioning & Air Filtration Systems",
+    description: "Expert installation and maintenance of efficient HVAC systems.",
+    features: ["Installation & maintenance services", "Efficient HVAC system solutions"],
+    image: "/images/Air-Conditioning.jpg",
   },
   {
     icon: Users,
-    title: "Business Consulting",
-    description:
-      "Expert guidance to help your business reach its full potential through strategic planning and process optimization.",
-    features: [
-      "Strategy Planning",
-      "Process Optimization",
-      "Growth Analysis",
-      "Market Research",
-      "Competitive Analysis",
-      "ROI Optimization",
-    ],
+    title: "Electromechanical Equipment Installation",
+    description: "Professional setup and integration of electromechanical systems.",
+    features: ["Professional installation of electromechanical systems", "Reliable equipment setup"],
+    image: "/images/Electromechanical.jpg",
   },
-  {
+   {
     icon: Lightbulb,
-    title: "Brand Strategy",
-    description:
-      "Build a strong brand identity that resonates with your target audience and differentiates you from competitors.",
-    features: [
-      "Brand Identity",
-      "Logo Design",
-      "Brand Guidelines",
-      "Market Positioning",
-      "Brand Messaging",
-      "Visual Identity",
-    ],
+    title: "Plumbing & Sanitary Contracting",
+    description: "High-quality plumbing and sanitary fixture installations.",
+    features: ["Expert plumbing and sanitary solutions", "High-quality fixture installations"],
+    image: "/images/plumber is plumbing.jpg",
   },
+  
   {
     icon: Shield,
-    title: "Security Solutions",
-    description: "Protect your business with comprehensive security measures and risk management strategies.",
-    features: [
-      "Data Protection",
-      "Cybersecurity",
-      "Risk Assessment",
-      "Compliance",
-      "Security Audits",
-      "Incident Response",
-    ],
+    title: "Floor and Wall Tiling Works",
+    description: "Custom, durable tiling services for floors and walls.",
+    features: ["Custom tiling for floors and walls", "Durable and aesthetic designs"],
+    image: "/images/WhatsApp Image 2025-06-28 at 12.06.34 (2).jpg",
   },
   {
     icon: Zap,
-    title: "Performance Optimization",
-    description: "Optimize your systems and processes for maximum efficiency, speed, and scalability.",
-    features: [
-      "Speed Optimization",
-      "System Analysis",
-      "Performance Monitoring",
-      "Scalability",
-      "Database Optimization",
-      "Infrastructure Scaling",
-    ],
+    title: "Carpentry & Flooring Services",
+    description: "Custom carpentry and premium flooring installations.",
+ features: ["Custom carpentry work", "Premium flooring installations"],
+    image: "/images/Carpentry & Flooring Services.jpg",
+  },
+  {
+    icon: Code,
+    title: "Painting Contracting",
+    description: "Professional interior and exterior painting with quality finishes.",
+    features: ["Interior and exterior painting services", "High-quality finishes"],
+    image: "/images/WhatsApp Image 2025-06-28 at 12.06.32.jpg",
+  },
+   {
+    icon: Code,
+    title: "Swimming Pool Tiling, Fixing & Maintenance",
+    description: "Expert tiling, repair, and regular maintenance for pools.",
+    features: ["Pool tiling and repair services", "Regular maintenance and upkeep"],
+    image: "/images/Swimming Pool Tiling, Fixing & Maintenance.jpg",
   },
 ]
 
@@ -110,6 +85,13 @@ const processSteps = [
     step: "04",
     title: "Optimization & Support",
     description: "We continuously monitor, optimize, and provide ongoing support to ensure lasting success.",
+  },
+   {
+    icon: Code,
+    title: "Swimming Pool Tiling, Fixing & Maintenance",
+    description: "Expert tiling, repair, and regular maintenance for pools.",
+    features: ["User Experience", "Interface Design", "Prototyping", "Usability Testing"],
+    image: "/images/Swimming Pool Tiling, Fixing & Maintenance.jpg",
   },
 ]
 
