@@ -199,7 +199,7 @@ export default function Home() {
 
             <div className="animate-slide-in-right">
               <img
-                src="/placeholder.svg?height=500&width=600"
+                src="/images/Skilled Workers at Technical Service Installation.png"
                 alt="Why Choose Us"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
