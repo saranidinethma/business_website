@@ -8,19 +8,20 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
-    action: "tel:+15551234567",
+    details: ["+971 50 918 2758 ", "+971 52 520 2590"],
+    action: "tel:+971 50 918 2758",
   },
+
   {
     icon: Mail,
     title: "Email",
-    details: ["info@yourbusiness.com", "support@yourbusiness.com"],
-    action: "mailto:info@yourbusiness.com",
+    details: ["info@solidservetech.com"],
+    action: "mailto:info@solidservetech.com",
   },
   {
     icon: MapPin,
     title: "Address",
-    details: ["123 Business Street", "Suite 100, City, State 12345"],
+    details: ["Business Bay, Dubai, UAE"],
     action: "#",
   },
   {
@@ -127,7 +128,7 @@ export default function Contact() {
                 <h3 className="text-xl font-semibold text-slate-800 mb-4">Quick Contact</h3>
 
                 <a
-                  href="https://wa.me/15551234567"
+                  href="https://wa.me/+94741982738"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-3 p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors"
@@ -140,13 +141,13 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="tel:+15551234567"
+                  href="tel:+94741982738"
                   className="flex items-center space-x-3 p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
                 >
                   <Phone className="h-6 w-6 text-blue-600" />
                   <div>
                     <div className="font-medium text-slate-800">Call Now</div>
-                    <div className="text-sm text-slate-600">+1 (555) 123-4567</div>
+                    <div className="text-sm text-slate-600">+94 741982738</div>
                   </div>
                 </a>
 

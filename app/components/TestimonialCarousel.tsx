@@ -58,14 +58,14 @@ export default function TestimonialCarousel() {
 		<div className="relative bg-slate-50 py-16">
 			<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="text-center mb-12">
-					<h2 className="text-3xl font-bold text-slate-800 mb-4">
+					<h2 className="text-4xl font-extrabold text-slate-800 mb-4">
 						What Our Clients Say
 					</h2>
 					<p className="text-slate-600">Don't just take our word for it</p>
 				</div>
 
 				<div className="relative">
-					<div className="bg-white rounded-lg shadow-lg p-8 text-center">
+					<div className="bg-white rounded-lg shadow-lg p-8 text-center border-2 border-blue-600">
 						<div className="flex justify-center mb-4">
 							{[...Array(testimonials[currentIndex].rating)].map((_, i) => (
 								<Star

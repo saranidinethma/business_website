@@ -13,10 +13,11 @@ export default function ServiceCard({ title, description, features, image }: Ser
       {/* Image container with enhanced styling */}
       <div className="relative w-full aspect-[4/3] bg-slate-100 rounded-t-2xl overflow-hidden flex-shrink-0">
         <img
-          src={image || "/placeholder.svg"}
-          alt={`${title} Service`}
-          className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-        />
+  src={image || "/placeholder.svg"}
+  alt={`${title} Service`}
+  className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
+  style={{ objectPosition: "center top" }} // Try "center top", "center bottom", or adjust as needed
+/>
       </div>
 
       {/* Content container */}

@@ -8,20 +8,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">YourBusiness</h3>
+            <h3 className="text-2xl font-bold">Solid Serve Technical Services LLC</h3>
             <p className="text-slate-300">
-              Professional services delivering excellence and innovation to help your business grow and succeed.
+              Professional services delivering excellence and innovation to help your property thrive and succeed.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-slate-300 hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
+            
+             
               <a href="#" className="text-slate-300 hover:text-white transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
@@ -61,24 +57,45 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-slate-300 hover:text-white transition-colors">
-                  Web Development
+                 Property Renovations
                 </a>
               </li>
               <li>
                 <a href="#" className="text-slate-300 hover:text-white transition-colors">
-                  Digital Marketing
+                 Air-Conditioning & Air Filtration Systems
                 </a>
               </li>
               <li>
                 <a href="#" className="text-slate-300 hover:text-white transition-colors">
-                  Business Consulting
+                  Electromechanical Equipment Installation
                 </a>
               </li>
               <li>
                 <a href="#" className="text-slate-300 hover:text-white transition-colors">
-                  Brand Strategy
+                 Plumbing & Sanitary Contracting
                 </a>
               </li>
+              <li>
+                <a href="#" className="text-slate-300 hover:text-white transition-colors">
+                 Floor and Wall Tiling Works
+                </a>
+              </li>
+               <li>
+                <a href="#" className="text-slate-300 hover:text-white transition-colors">
+                 Painting Contracting
+                </a>
+              </li>
+               <li>
+                <a href="#" className="text-slate-300 hover:text-white transition-colors">
+                 Carpentry & Flooring Services
+                </a>
+              </li>
+               <li>
+                <a href="#" className="text-slate-300 hover:text-white transition-colors">
+         Swimming Pool Tiling, Fixing & Maintenance
+                </a>
+              </li>
+              
             </ul>
           </div>
 
@@ -88,15 +105,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-blue-400" />
-                <span className="text-slate-300">+1 (555) 123-4567</span>
+                <span className="text-slate-300">+971 50 918 2758 / +971 52 520 2590</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-blue-400" />
-                <span className="text-slate-300">info@yourbusiness.com</span>
+                <span className="text-slate-300">info@solidservetech.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-blue-400" />
-                <span className="text-slate-300">123 Business St, City, State 12345</span>
+                <span className="text-slate-300">Business Bay, Dubai, UAE</span>
               </div>
             </div>
           </div>

@@ -279,9 +279,9 @@ export default function Home() {
 			{/* Contact CTA */}
 			<section className="section-padding bg-slate-800 text-white">
 				<div className="max-w-4xl mx-auto text-center">
-					<h2 className="text-3xl lg:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+					<h2 className="text-3xl lg:text-4xl font-bold mb-6">Ready to Elevate Your Property?</h2>
 					<p className="text-xl text-slate-300 mb-8">
-						Let's discuss how our professional services can help you achieve your goals and drive sustainable growth.
+					Let's discuss how our technical expertise can enhance your property and drive sustainable growth.
 					</p>
 					<div className="flex flex-col sm:flex-row gap-4 justify-center">
 						<Link href="/contact" className="btn-primary">

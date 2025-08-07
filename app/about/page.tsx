@@ -65,8 +65,7 @@ export default function About() {
               <span className="text-blue-400"> Our Company</span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              We are passionate professionals dedicated to helping businesses grow through innovative solutions and
-              exceptional service.
+             We are passionate professionals dedicated to helping properties grow through innovative technical solutions and exceptional service.
             </p>
           </div>
         </div>
@@ -80,9 +79,7 @@ export default function About() {
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-6">Our Story</h2>
               <div className="space-y-4 text-lg text-slate-600">
                 <p>
-                  Founded in 2020, our company began with a simple mission: to help businesses thrive in the digital age
-                  through innovative solutions and exceptional service. What started as a small team of passionate
-                  professionals has grown into a trusted partner for companies across various industries.
+                  Founded in 2020, our company began with a simple mission to help properties thrive in the United Arab Emirates through innovative solutions and exceptional service. What started as a small team of skilled professionals has grown into a trusted partner for clients across residential, commercial, and industrial sectors.
                 </p>
                 <p>
                   We believe that every business has unique challenges and opportunities. That's why we take a
@@ -90,9 +87,7 @@ export default function About() {
                   that drive real results.
                 </p>
                 <p>
-                  Over the years, we've had the privilege of working with amazing clients, from startups to established
-                  enterprises, helping them achieve their goals and exceed their expectations. Our success is measured
-                  by the success of our clients.
+                  Over the years, we've had the privilege of working with amazing clients, from startups to established enterprises, helping them achieve their goals and exceed their expectations. Our success is measured by the success of our clients.
                 </p>
               </div>
 
@@ -204,9 +199,10 @@ export default function About() {
                 <h2 className="text-3xl font-bold text-slate-800">Our Mission</h2>
               </div>
               <p className="text-lg text-slate-600 mb-6">
-                To empower businesses with innovative solutions that drive growth, enhance efficiency, and create
-                lasting value. We are committed to being the trusted partner that helps our clients navigate the
-                complexities of the modern business landscape.
+                To empower properties with innovative technical solutions that drive growth, 
+                enhance efficiency, and create lasting value.
+                 We are committed to being the trusted partner that helps our clients n
+                 avigate the complexities of property management and development.
               </p>
 
               <div className="flex items-center mb-6">
@@ -214,9 +210,10 @@ export default function About() {
                 <h2 className="text-3xl font-bold text-slate-800">Our Vision</h2>
               </div>
               <p className="text-lg text-slate-600">
-                To be the leading provider of professional services, recognized for our innovation, integrity, and
-                impact. We envision a future where every business, regardless of size, has access to world-class
-                solutions that enable them to thrive.
+                To be the leading provider of professional technical services,
+                 recognized for our innovation, integrity, and impact. 
+                 We envision a future where every property, regardless of size, 
+                 has access to world-class solutions that enable it to thrive.
               </p>
             </div>
 

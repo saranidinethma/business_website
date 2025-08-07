@@ -68,31 +68,31 @@ const services = [
 const processSteps = [
   {
     step: "01",
-    title: "Discovery & Analysis",
-    description: "We start by understanding your business, goals, and challenges through comprehensive analysis.",
+    title: "Consultation & Site Visit",
+    description: "We start by understanding your requirements and conducting a site visit to assess the project scope and technical needs.",
   },
   {
     step: "02",
-    title: "Strategy Development",
-    description: "Based on our findings, we develop a customized strategy tailored to your specific needs.",
+    title: "Customized Quotation",
+    description: "Based on your needs and site assessment, we provide a transparent and detailed quotation outlining the scope of work, timeline, and pricing.",
   },
   {
     step: "03",
-    title: "Implementation",
-    description: "Our expert team executes the strategy with precision, keeping you informed every step of the way.",
+    title: "Project Planning",
+    description: "Once approved, we schedule the work, assign qualified technicians, and ensure all materials and resources are ready for smooth execution.",
   },
   {
     step: "04",
-    title: "Optimization & Support",
-    description: "We continuously monitor, optimize, and provide ongoing support to ensure lasting success.",
+    title: "Execution & Supervision",
+    description: "Our experienced team carries out the work with precision and professionalism, adhering to UAE regulations and strict quality standards.",
   },
-   {
-    icon: Code,
-    title: "Swimming Pool Tiling, Fixing & Maintenance",
-    description: "Expert tiling, repair, and regular maintenance for pools.",
-    features: ["User Experience", "Interface Design", "Prototyping", "Usability Testing"],
-    image: "/images/Swimming Pool Tiling, Fixing & Maintenance.jpg",
+  {
+    step: "05",
+    title: "Final Inspection & Support",
+    description: "We perform a thorough quality check, complete the handover, and offer ongoing support or maintenance as needed. ",
+
   },
+ 
 ]
 
 export default function Services() {
@@ -110,8 +110,7 @@ export default function Services() {
               <span className="text-blue-400"> Services</span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive solutions designed to drive your business forward with innovation, expertise, and measurable
-              results.
+              Comprehensive solutions designed to elevate your property with expertise, innovation, and measurable results.
             </p>
             <Link href="/contact" className="btn-primary">
               Get Started Today
@@ -126,8 +125,7 @@ export default function Services() {
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">What We Offer</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              From web development to digital marketing, we provide end-to-end solutions that help businesses thrive in
-              the digital age.
+              From property renovations to technical installations, we provide end-to-end solutions that help your property thrive with excellence.
             </p>
           </div>
 
@@ -143,28 +141,44 @@ export default function Services() {
 
       {/* Process Section */}
       <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Our Process</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We follow a proven methodology to ensure every project delivers exceptional results and exceeds
-              expectations.
-            </p>
-          </div>
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Our Process</h2>
+      <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+        We follow a proven methodology to ensure every project delivers exceptional results and exceeds
+        expectations.
+      </p>
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => (
-              <div key={index} className="text-center animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  {step.step}
-                </div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-3">{step.title}</h3>
-                <p className="text-slate-600">{step.description}</p>
-              </div>
-            ))}
+    {/* Custom grid: first row 2 steps, second row 3 steps */}
+    <div className="flex flex-col gap-8 items-center">
+      {/* First row: first 2 steps */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl">
+        {processSteps.slice(0, 2).map((step, index) => (
+          <div key={index} className="text-center animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              {step.step}
+            </div>
+            <h3 className="text-xl font-semibold text-slate-800 mb-3">{step.title}</h3>
+            <p className="text-slate-600">{step.description}</p>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+      {/* Second row: next 3 steps */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl">
+        {processSteps.slice(2).map((step, index) => (
+          <div key={index + 2} className="text-center animate-fade-in-up" style={{ animationDelay: `${(index + 2) * 0.1}s` }}>
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              {step.step}
+            </div>
+            <h3 className="text-xl font-semibold text-slate-800 mb-3">{step.title}</h3>
+            <p className="text-slate-600">{step.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Features Section */}
       <section className="section-padding bg-slate-50">
@@ -173,13 +187,12 @@ export default function Services() {
             <div className="animate-slide-in-left">
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-6">Why Our Services Stand Out</h2>
               <p className="text-lg text-slate-600 mb-8">
-                We combine cutting-edge technology with proven strategies to deliver solutions that not only meet your
-                current needs but also prepare you for future growth.
+                We combine cutting-edge technology with proven strategies to deliver solutions that not only meet your current needs but also prepare you for future growth.
               </p>
 
               <div className="space-y-4">
                 {[
-                  "Customized solutions tailored to your business",
+                  "Customized solutions tailored to your property",
                   "Expert team with years of industry experience",
                   "Proven track record of successful projects",
                   "Ongoing support and maintenance",
@@ -196,7 +209,7 @@ export default function Services() {
 
             <div className="animate-slide-in-right">
               <img
-                src="/placeholder.svg?height=500&width=600"
+                src="/images/image.jpg"
                 alt="Service Features"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
