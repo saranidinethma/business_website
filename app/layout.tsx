@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Solid Serve Technical Services LLC  ",
-  description: "Professional business services with expert solutions",
+  description: "delivering dependable technical solutions across the UAE.",
 }
 
 export default function RootLayout({
