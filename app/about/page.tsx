@@ -8,22 +8,22 @@ const values = [
   {
     icon: Target,
     title: "Excellence",
-    description: "We strive for excellence in everything we do, delivering quality that exceeds expectations.",
+    description: "We are dedicated to delivering superior technical solutions, ensuring every project meets the highest standards of quality and precision.",
   },
   {
     icon: Heart,
     title: "Integrity",
-    description: "We conduct business with honesty, transparency, and ethical practices at all times.",
+    description: "We uphold honesty, transparency, and ethical conduct in all our operations, fostering trust with our clients across the UAE.",
   },
   {
     icon: Users,
     title: "Collaboration",
-    description: "We believe in the power of teamwork and building strong partnerships with our clients.",
+    description: "We value teamwork and strong client relationships, working closely to achieve shared goals and successful project outcomes.",
   },
   {
     icon: TrendingUp,
     title: "Innovation",
-    description: "We embrace new technologies and creative solutions to stay ahead of the curve.",
+    description: "We adopt cutting-edge technologies and creative approaches to provide innovative solutions for residential, commercial, and industrial projects.",
   },
 ]
 
@@ -75,16 +75,14 @@ export default function About() {
       <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-slide-in-left">
+            <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-6">Our Story</h2>
               <div className="space-y-4 text-lg text-slate-600">
                 <p>
                   Founded in 2020, our company began with a simple mission to help properties thrive in the United Arab Emirates through innovative solutions and exceptional service. What started as a small team of skilled professionals has grown into a trusted partner for clients across residential, commercial, and industrial sectors.
                 </p>
                 <p>
-                  We believe that every business has unique challenges and opportunities. That's why we take a
-                  personalized approach to every project, combining our expertise with your vision to create solutions
-                  that drive real results.
+                  We believe that every business has unique challenges and opportunities. That's why we take a personalized approach to every project, combining our expertise with your vision to create solutions that drive real results.
                 </p>
                 <p>
                   Over the years, we've had the privilege of working with amazing clients, from startups to established enterprises, helping them achieve their goals and exceed their expectations. Our success is measured by the success of our clients.
@@ -101,12 +99,24 @@ export default function About() {
               </div>
             </div>
 
-            <div className="animate-slide-in-right">
-              <img
-                src="/placeholder.svg?height=500&width=600"
-                alt="Our Story"
-                className="w-full h-auto rounded-lg shadow-lg"
-              />
+            {/* Add your image here, remove animation */}
+            <div className="hidden lg:block relative">
+              <div className="relative w-full h-full">
+                <img
+                  src="/images/OUR story.jpg.png"
+                  alt="Our Story"
+                  className="w-full h-auto object-cover"
+                  style={{ display: "block" }}
+                />
+                {/* Improved fade effect: pure white at all edges */}
+                <div
+                  className="absolute inset-0 pointer-events-none rounded-xl"
+                  style={{
+                    background: "radial-gradient(circle, rgba(255,255,255,0.7) 60%, rgba(255,255,255,1) 100%)",
+                    zIndex: 2,
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -129,7 +139,7 @@ export default function About() {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
                 <div className="lg:col-span-1">
                   <img
-                    src="/placeholder.svg?height=300&width=300"
+                    src="/images/JOSEPH MERVYN.jpg"
                     alt="Joseph Mervyn"
                     className="w-full max-w-sm mx-auto rounded-lg shadow-md"
                   />
@@ -141,46 +151,14 @@ export default function About() {
 
                   <div className="space-y-4 text-slate-600 mb-6">
                     <p>
-                      Joseph is the visionary behind our company, bringing over 8 years of experience in business
-                      strategy and digital transformation. His passion for innovation and commitment to excellence
-                      drives our team to deliver exceptional results for every client.
+                   Joseph is the visionary behind our company, with a deep passion for innovation and a commitment to excellence. His expertise in business strategy and digital transformation inspires our team to deliver outstanding results for every client. With a strong background in technology and business development, Joseph has successfully led projects across diverse industries, driving sustainable growth and competitive advantage for our clients.
                     </p>
-                    <p>
-                      With a background in technology and business development, Joseph has successfully led numerous
-                      projects across various industries, helping businesses achieve sustainable growth and competitive
-                      advantage.
-                    </p>
+                    
                   </div>
 
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="h-5 w-5 text-green-500" />
-                      <span>8+ Years Industry Experience</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="h-5 w-5 text-green-500" />
-                      <span>MBA in Business Strategy</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="h-5 w-5 text-green-500" />
-                      <span>Certified Project Management Professional</span>
-                    </div>
-                  </div>
+                  
 
-                  <div className="flex space-x-4 mt-6">
-                    <a href="#" className="text-slate-600 hover:text-blue-600 transition-colors">
-                      <Linkedin className="h-6 w-6" />
-                    </a>
-                    <a href="#" className="text-slate-600 hover:text-blue-600 transition-colors">
-                      <Twitter className="h-6 w-6" />
-                    </a>
-                    <a
-                      href="mailto:joseph@yourbusiness.com"
-                      className="text-slate-600 hover:text-blue-600 transition-colors"
-                    >
-                      <Mail className="h-6 w-6" />
-                    </a>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -199,10 +177,8 @@ export default function About() {
                 <h2 className="text-3xl font-bold text-slate-800">Our Mission</h2>
               </div>
               <p className="text-lg text-slate-600 mb-6">
-                To empower properties with innovative technical solutions that drive growth, 
-                enhance efficiency, and create lasting value.
-                 We are committed to being the trusted partner that helps our clients n
-                 avigate the complexities of property management and development.
+Solid Serve Technical Services LLC is committed to delivering high-quality technical solutions across the UAE with professionalism and precision. We prioritize safety, timely execution, and client satisfaction, building trust through exceptional service.
+
               </p>
 
               <div className="flex items-center mb-6">
@@ -210,10 +186,7 @@ export default function About() {
                 <h2 className="text-3xl font-bold text-slate-800">Our Vision</h2>
               </div>
               <p className="text-lg text-slate-600">
-                To be the leading provider of professional technical services,
-                 recognized for our innovation, integrity, and impact. 
-                 We envision a future where every property, regardless of size, 
-                 has access to world-class solutions that enable it to thrive.
+                To be the UAE’s leading technical services provider, renowned for quality, reliability, and innovation, setting industry standards through sustainable practices and client-focused excellence.
               </p>
             </div>
 

@@ -120,12 +120,7 @@ export default function Contact() {
 							<h2 className="text-3xl font-bold text-slate-800 mb-6">
 								Visit Our Office
 							</h2>
-							<p className="text-lg text-slate-600 mb-8">
-								We're located in the heart of the business district, easily
-								accessible by public transportation and with ample parking
-								available.
-							</p>
-
+							
 							{/* Quick Contact Options */}
 							<div className="space-y-4">
 								<h3 className="text-xl font-semibold text-slate-800 mb-4">
@@ -133,19 +128,29 @@ export default function Contact() {
 								</h3>
 
 								<a
-									href="https://wa.me/15551234567"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="flex items-center space-x-3 p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors"
-								>
-									<MessageSquare className="h-6 w-6 text-green-600" />
-									<div>
-										<div className="font-medium text-slate-800">WhatsApp</div>
-										<div className="text-sm text-slate-600">
-											Chat with us instantly
-										</div>
-									</div>
-								</a>
+    href="https://wa.me/971509182758"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center space-x-3 p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors"
+  >
+    <MessageSquare className="h-6 w-6 text-green-600" />
+    <div>
+      <div className="font-medium text-slate-800">WhatsApp (Primary)</div>
+      <div className="text-sm text-slate-600">Chat with us instantly</div>
+    </div>
+  </a>
+  <a
+    href="https://wa.me/971525202590" // Replace with the new number
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center space-x-3 p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors mt-4"
+  >
+    <MessageSquare className="h-6 w-6 text-green-600" />
+    <div>
+      <div className="font-medium text-slate-800">WhatsApp (Secondary)</div>
+      <div className="text-sm text-slate-600">Chat with our support team</div>
+    </div>
+  </a>
 
 								<a
 									href="tel:+15551234567"

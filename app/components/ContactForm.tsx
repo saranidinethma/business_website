@@ -1,15 +1,14 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Send, CheckCircle } from "lucide-react"
+import emailjs from "emailjs-com"
 
 interface FormData {
   name: string
   email: string
   phone: string
-  subject: string
   message: string
 }
 
@@ -17,7 +16,6 @@ interface FormErrors {
   name?: string
   email?: string
   phone?: string
-  subject?: string
   message?: string
 }
 
@@ -26,7 +24,6 @@ export default function ContactForm() {
     name: "",
     email: "",
     phone: "",
-    subject: "",
     message: "",
   })
 
@@ -37,27 +34,14 @@ export default function ContactForm() {
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {}
 
-    if (!formData.name.trim()) {
-      newErrors.name = "Name is required"
-    }
-
+    if (!formData.name.trim()) newErrors.name = "Name is required"
     if (!formData.email.trim()) {
       newErrors.email = "Email is required"
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Email is invalid"
     }
-
-    if (!formData.phone.trim()) {
-      newErrors.phone = "Phone is required"
-    }
-
-    if (!formData.subject.trim()) {
-      newErrors.subject = "Subject is required"
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = "Message is required"
-    }
+    if (!formData.phone.trim()) newErrors.phone = "Phone is required"
+    if (!formData.message.trim()) newErrors.message = "Message is required"
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
@@ -65,30 +49,38 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-
     if (!validateForm()) return
 
     setIsSubmitting(true)
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      await emailjs.send(
+        "service_gdiquht", // your Service ID
+        "template_2ehw33c", // your Template ID
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        },
+        "v0tCRdA51xOIF7oN4" // replace with your EmailJS public key
+      )
+
       setIsSubmitting(false)
       setIsSubmitted(true)
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
-      })
-    }, 2000)
+      setFormData({ name: "", email: "", phone: "", message: "" })
+    } catch (error) {
+      console.error("EmailJS error:", error)
+      setIsSubmitting(false)
+      alert("Something went wrong while sending your message. Please try again later.")
+    }
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
-
-    // Clear error when user starts typing
     if (errors[name as keyof FormErrors]) {
       setErrors((prev) => ({ ...prev, [name]: undefined }))
     }
@@ -150,46 +142,22 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
-              Phone Number *
-            </label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 ${
-                errors.phone ? "border-red-500" : "border-slate-300"
-              }`}
-              placeholder="Enter your phone number"
-            />
-            {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone}</p>}
-          </div>
-
-          <div>
-            <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
-              Subject *
-            </label>
-            <select
-              id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 ${
-                errors.subject ? "border-red-500" : "border-slate-300"
-              }`}
-            >
-              <option value="">Select a subject</option>
-              <option value="general">General Inquiry</option>
-              <option value="services">Services Information</option>
-              <option value="quote">Request Quote</option>
-              <option value="support">Support</option>
-            </select>
-            {errors.subject && <p className="mt-1 text-sm text-red-600">{errors.subject}</p>}
-          </div>
+        <div>
+          <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
+            Phone Number *
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 ${
+              errors.phone ? "border-red-500" : "border-slate-300"
+            }`}
+            placeholder="Enter your phone number"
+          />
+          {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone}</p>}
         </div>
 
         <div>
