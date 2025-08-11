@@ -200,22 +200,22 @@ export default function Contact() {
 							{
 								question: "How long does a typical project take?",
 								answer:
-									"Project timelines vary depending on scope and complexity. Most projects are completed within 4-12 weeks. We'll provide a detailed timeline during our initial consultation.",
+									"Project timelines depend on the type and scale of work. Small repairs can be completed within a day, while larger projects such as full property renovations may take several weeks. We’ll provide a clear timeline after our site inspection.",
 							},
 							{
-								question: "Do you offer ongoing support after project completion?",
+								question: "Do you provide maintenance after project completion?",
 								answer:
-									"Yes, we provide comprehensive ongoing support and maintenance packages to ensure your solution continues to perform optimally.",
+									"Yes. We offer ongoing maintenance packages for HVAC systems, plumbing, tiling, and other services to keep your property in top condition.",
 							},
 							{
-								question: "What industries do you work with?",
+								question: "Which areas do you serve?",
 								answer:
-									"We work with businesses across various industries including technology, healthcare, finance, retail, and professional services.",
+									"We operate across the United Arab Emirates, catering to residential, commercial, and industrial clients.",
 							},
 							{
 								question: "How do you handle project communication?",
 								answer:
-									"We maintain regular communication through scheduled check-ins, progress reports, and are always available for questions via email, phone, or video calls.",
+									"We ensure regular updates through site visits, progress reports, and open communication via phone, email, or WhatsApp",
 							},
 						].map((faq, index) => (
 							<div key={index} className="bg-white rounded-lg shadow-md p-6">
